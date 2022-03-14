@@ -6,8 +6,8 @@ function calculaMedia() {
     let nota2 = document.getElementById('nota2').value
     let nota3 = document.getElementById('nota3').value
 
-   
-    let res = window.document.getElementById('media')
+
+    let res = document.getElementById('media')
 
     let media = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / 10;
 
@@ -32,24 +32,27 @@ function validaPassword() {
 
 /*  Solucao: Questão 03 */
 function calculaIntervalo() {
-    let valor = window.document.getElementById('valor').value
-    let intervalo = window.document.getElementById('intervalo')
+    let valor = document.getElementById('valor').value
+    let intervalo = document.getElementById('intervalo')
 
-    /* if (valor >= 0 || valor <= 25) */
-    if (valor == '')
-     {
-        intervalo.innerHTML = `Resultado: O valor digitado é invalido`;
-        /* intervalo.innerHTML = `Resultado: O valor digitado esta no intervalo [0,25]`; */
+
+    if (valor >= 0 && valor <= 25) {
+        resultado = "[0,25]";
     }
-   else if (valor){
-        intervalo.innerHTML = `Resultado: O valor digitado esta no intervalo [25,50]`
-       /*  resultado.innerHTML = `Resultado: O valor digitado esta no intervalo [50,75]`
-        resultado.innerHTML = `Resultado: O valor digitado esta no intervalo [75,100]` */
+    else if (valor > 25 && valor <= 50) {
+        resultado = "[25,50]";
     }
-    
+    else if (valor > 50 && valor <= 75) {
+        resultado = "[50,75]";
+    }
+    else if (valor > 75 && valor <= 100) {
+        resultado = "[75,100]";
+    }
+    else {
+        resultado = "Fora de intervalo";
+    }
 
-
-
+    intervalo.innerHTML = `Resultado: O valor digitado esta no intervalo ${resultado}`
 }
 
 /*  Solucao: Questão 04 */
