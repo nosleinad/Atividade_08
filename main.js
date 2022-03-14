@@ -2,19 +2,16 @@
 /*  Solucao: Questão 01 */
 function calculaMedia() {
 
-    let n1 = window.document.getElementById('nota1')
-    let n2 = window.document.getElementById('nota2')
-    let n3 = window.document.getElementById('nota3')
+    let nota1 = document.getElementById('nota1').value
+    let nota2 = document.getElementById('nota2').value
+    let nota3 = document.getElementById('nota3').value
 
-    let nota1 = Number(n1.value)
-    let nota2 = Number(n2.value)
-    let nota3 = Number(n3.value)
-
+   
     let res = window.document.getElementById('media')
 
-    let media = (nota1 + nota2 + nota3) / 3;
+    let media = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / 10;
 
-    res.innerHTML = `Resultado: A média das 3 notas foi: <strong>${media.toFixed(2)} `
+    res.innerHTML = `Resultado: A média das 3 notas foi: <strong>${media} `
 }
 
 /*  Solucao: Questão 02 */
