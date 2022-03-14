@@ -90,7 +90,7 @@ function calculoSalario(){
         novoSalario = salario + ganho;
     }
 
-    resultado.innerHTML = `Resultado: Novo salario: ${novoSalario}, Ganho: xx.${ganho}, Percentual: ${percentual}%`
+    resultado.innerHTML = `Resultado: Novo salario: ${novoSalario}, Ganho: ${ganho}, Percentual: ${percentual}%`
 }
 
 /*  Solucao: Questão 05 */
@@ -99,14 +99,14 @@ function calculoSalario(){
 /*  Solucao: Questão 06 */
 
 function calculaSalario() {
-    let funcionario = window.document.getElementById('nome').value
-    let valorhora = window.document.getElementById('valorHora').value
-    let totalHoras = window.document.getElementById('totalHoras').value
-    let res = window.document.getElementById('salario')
+    let funcionario = document.getElementById('nome').value
+    let valorhora = document.getElementById('valorHora').value
+    let totalHoras = document.getElementById('totalHoras').value
+    let res = document.getElementById('calSalario')
 
     let total = totalHoras * valorhora
 
-    res.innerHTML = `Resultado: O funcionario <strong>${funcionario} </strong> vai receber <strong>R$ ${total.toFixed(2)} `
+    res.innerHTML = `Resultado: O funcionario <strong>${funcionario} </strong> vai receber <strong>R$ ${total} `
 }
 
 /*  Solucao: Questão 07 */
