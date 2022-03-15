@@ -56,7 +56,7 @@ function calculaIntervalo() {
 }
 
 /*  Solucao: Questão 04 */
-function calculoSalario(){
+function calculoSalario() {
     let salario = document.getElementById("salario").value
     let resultado = document.getElementById('resultado04')
     let novoSalario = 0;
@@ -64,27 +64,27 @@ function calculoSalario(){
     let percentual = 0;
 
 
-    if (salario >= 0 && salario <= 400){
+    if (salario >= 0 && salario <= 400) {
         percentual = 15;
         ganho = salario * 0.15;
         novoSalario = salario + ganho;
     }
-    if (salario > 400 && salario <= 800){
+    if (salario > 400 && salario <= 800) {
         percentual = 12;
         ganho = salario * 0.12;
         novoSalario = salario + ganho;
     }
-    if (salario > 800 && salario <= 1200){
+    if (salario > 800 && salario <= 1200) {
         percentual = 10;
         ganho = salario * 0.10;
         novoSalario = salario + ganho;
     }
-    if (salario > 1200 && salario <= 2000){
+    if (salario > 1200 && salario <= 2000) {
         percentual = 7;
         ganho = salario * 0.07;
         novoSalario = salario + ganho;
     }
-    if (salario > 2000 ){
+    if (salario > 2000) {
         percentual = 4;
         ganho = salario * 0.04;
         novoSalario = salario + ganho;
@@ -94,7 +94,33 @@ function calculoSalario(){
 }
 
 /*  Solucao: Questão 05 */
+function calculoImposto() {
+    let renda = document.getElementById("renda").value
+    let imposto = 0;
+    let resultado = "";
 
+    if (renda <= 2000) {
+        resultado = "Isento";
+    }
+    if (renda > 2000 && renda <= 3000) {
+        imposto = renda - 2000;
+        imposto = imposto * 0.08;
+        resultado = `R$ ${imposto}`;
+    }
+    if (renda > 3000 && renda <= 4500) {
+        imposto = renda - 3000;
+        imposto = (imposto * 0.18) + 80;
+        resultado = `R$ ${imposto}`;
+    }
+    if (renda > 4500) {
+        imposto = renda - 4500;
+        imposto = (imposto * 0.28) + 350;
+        resultado = `R$ ${imposto}`;
+    }
+
+
+   document.getElementById("resultado05").innerHTML = `Resultado: ${resultado}!`
+}
 
 /*  Solucao: Questão 06 */
 
