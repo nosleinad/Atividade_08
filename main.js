@@ -67,7 +67,7 @@ function calculoSalario() {
     if (salario >= 0 && salario <= 400) {
         percentual = 15;
         ganho = salario * 0.15;
-        novoSalario = salario + ganho;
+        novoSalario = +salario + ganho;
     }
     if (salario > 400 && salario <= 800) {
         percentual = 12;
@@ -77,20 +77,20 @@ function calculoSalario() {
     if (salario > 800 && salario <= 1200) {
         percentual = 10;
         ganho = salario * 0.10;
-        novoSalario = salario + ganho;
+        novoSalario = +salario + ganho;
     }
     if (salario > 1200 && salario <= 2000) {
         percentual = 7;
         ganho = salario * 0.07;
-        novoSalario = salario + ganho;
+        novoSalario = +salario + ganho;
     }
     if (salario > 2000) {
         percentual = 4;
         ganho = salario * 0.04;
-        novoSalario = salario + ganho;
+        novoSalario = +salario + ganho;
     }
 
-    resultado.innerHTML = `Resultado: Novo salario: ${novoSalario}, Ganho: ${ganho}, Percentual: ${percentual}%`
+    resultado.innerHTML = `Resultado: Novo salario: ${novoSalario.toFixed(2)}, Ganho: ${ganho.toFixed(2)}, Percentual: ${percentual}%`
 }
 
 /*  Solucao: Questão 05 */
