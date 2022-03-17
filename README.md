@@ -1,4 +1,4 @@
-# Resolução de exercios - Curso SENAI Frontend
+# Resolução de exercicios - Curso SENAI Frontend
 
 # Sobre o Projeto
 - Esta página foi criado com intuito de colocar em prática os conhecimentos adquiridos em JavaScript.
